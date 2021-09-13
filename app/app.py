@@ -26,7 +26,7 @@ def index():
 
         response_data = {
             "data":data,
-            "message": "OK: Authorized Access to Client 1" ,
+            "message": "OK: Authorized Access to Client_1" ,
            }
 
         app.logger.info(response_data)
@@ -37,7 +37,7 @@ def index():
 
         response_data = {
             "data":data,
-            "message": "OK: Authorized Access to Client 2" ,
+            "message": "OK: Authorized Access to Client_2" ,
            }
 
         app.logger.info(response_data)
