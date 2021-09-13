@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 PORT = os.environ.get('PORT')
 
-@app.route('/')
+@app.route('/', methods = ['POST','GET'])
 def index():
 
     headers = request.headers
