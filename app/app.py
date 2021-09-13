@@ -24,21 +24,33 @@ def index():
 
     if auth == 'pass1':
 
-        return jsonify({
+        response_data = {
            "message": "OK: Authorized Access to Client 1" ,
            "data":data
-           }), 200
+           }
+
+        app.logger.info(response_data)
+
+        return jsonify(response_data), 200
    
     if auth == 'pass2':
 
-        return jsonify({
+        response_data = {
            "message": "OK: Authorized Access to Client 2" ,
            "data":data
-           }), 200
+           }
+
+        app.logger.info(response_data)
+
+        return jsonify(response_data), 200
 
     else:
 
-        return jsonify({"message": "ERROR: Unauthorized"}), 401
+        response_data = {"message": "ERROR: Unauthorized"}
+
+        app.logger.info(response_data)
+
+        return jsonify(response_data), 401
 
 if __name__ == '__main__':
 
