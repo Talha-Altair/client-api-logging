@@ -25,8 +25,8 @@ def index():
     if auth == 'pass1':
 
         response_data = {
-           "message": "OK: Authorized Access to Client 1" ,
-           "data":data
+            "data":data,
+            "message": "OK: Authorized Access to Client 1" ,
            }
 
         app.logger.info(response_data)
@@ -36,8 +36,8 @@ def index():
     if auth == 'pass2':
 
         response_data = {
-           "message": "OK: Authorized Access to Client 2" ,
-           "data":data
+            "data":data,
+            "message": "OK: Authorized Access to Client 2" ,
            }
 
         app.logger.info(response_data)
