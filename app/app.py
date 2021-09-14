@@ -12,6 +12,8 @@ PORT = os.environ.get('PORT')
 @app.route('/', methods = ['POST','GET'])
 def index():
 
+    auth = None
+
     if request.method == 'POST':
 
         auth = request.values.get('api_key')
