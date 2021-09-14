@@ -6,4 +6,10 @@ def get_details():
 
     name = fake.name()
 
-    return name
+    data = {
+            "name" : name
+        }
+
+    print(data)
+
+    return data

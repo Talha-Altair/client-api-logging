@@ -6,4 +6,10 @@ def get_details():
 
     country = fake.country()
 
-    return country
+    data = {
+            "country" : country
+        }
+
+    print(data)
+
+    return data

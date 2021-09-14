@@ -45,11 +45,7 @@ def index():
 
         app.logger.info(response_data)
 
-        data = {
-            "country" : client_1.get_details()
-        }
-
-        app.logger.info(data)
+        data = client_1.get_details()
 
         return jsonify(data), 200
    
@@ -62,11 +58,7 @@ def index():
 
         app.logger.info(response_data)
 
-        data = {
-            "name" : client_2.get_details()
-        }
-
-        app.logger.info(data)
+        data = client_2.get_details()
 
         return jsonify(data), 200
 
