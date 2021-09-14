@@ -12,6 +12,16 @@ PORT = os.environ.get('PORT')
 @app.route('/', methods = ['POST','GET'])
 def index():
 
+    if request.method == 'GET':
+
+        response_data = {
+            "message": "Only POST Requests Allowed" ,
+           }
+
+        app.logger.info(response_data)
+
+        return jsonify(response_data), 401
+
     auth = None
 
     if request.method == 'POST':
