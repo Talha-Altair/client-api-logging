@@ -2,6 +2,8 @@ from flask import Flask, request, jsonify
 import random
 from dotenv import load_dotenv
 import os
+import client_1
+import client_2
 
 load_dotenv()
 
@@ -43,7 +45,13 @@ def index():
 
         app.logger.info(response_data)
 
-        return jsonify(response_data), 200
+        data = {
+            "country" : client_1.get_details()
+        }
+
+        app.logger.info(data)
+
+        return jsonify(data), 200
    
     if auth == 'pass2':
 
@@ -54,7 +62,13 @@ def index():
 
         app.logger.info(response_data)
 
-        return jsonify(response_data), 200
+        data = {
+            "name" : client_2.get_details()
+        }
+
+        app.logger.info(data)
+
+        return jsonify(data), 200
 
     else:
 
