@@ -12,9 +12,7 @@ PORT = os.environ.get('PORT')
 @app.route('/', methods = ['POST','GET'])
 def index():
 
-    headers = request.headers
-
-    auth = headers.get("api_key")
+    auth = request.get('api_key')
 
     num = random.randint(1000,9999)
 
@@ -54,4 +52,4 @@ def index():
 
 if __name__ == '__main__':
 
-    app.run(debug = True, port = PORT)
+    app.run(debug = True, port = PORT, host='0.0.0.0')
