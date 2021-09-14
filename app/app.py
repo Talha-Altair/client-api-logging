@@ -12,7 +12,9 @@ PORT = os.environ.get('PORT')
 @app.route('/', methods = ['POST','GET'])
 def index():
 
-    auth = request.values.get('api_key')
+    if request.method == 'POST':
+
+        auth = request.values.get('api_key')
 
     num = random.randint(1000,9999)
 
